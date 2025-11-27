@@ -5,7 +5,7 @@ import { Link } from 'react-router';
 const Header = () => {
     const [active, setActive] = useState('')
     return (
-        <div className="navbar bg-base-100 shadow-sm px-5 bg-blue-200">
+        <div className="navbar  shadow-sm px-5 bg-blue-200">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">

@@ -69,7 +69,7 @@ const DoctorDetails = () => {
                     </div>
                 </div>
                 <div className='flex flex-col items-center'>
-                    <Link to={"/Bookings"} className='w-7/8'><button className='btn rounded-4xl w-full' onClick={() => { handleAppointment(id) }}> Book Appointment Now </button></Link>
+                    <Link to={"/Bookings"} className='w-7/8'><button className='btn rounded-4xl w-full ' onClick={() => { handleAppointment(id) }}> Book Appointment Now </button></Link>
                 </div>
             </div>
         </div>

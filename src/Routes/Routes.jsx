@@ -6,6 +6,7 @@ import Blog from "../Pages/Blog/Blog";
 import ContactUs from "../Pages/ContactUs/ContactUs";
 import Error from "../Pages/Error/Error";
 import DoctorDetails from "../Pages/DoctorDetails/DoctorDetails";
+import ErrorForBookMarks from "../Pages/Error/ErrorForBookMarks";
 
 const router = createBrowserRouter([
   {
@@ -25,7 +26,8 @@ const router = createBrowserRouter([
       {
         path: "/Bookings",
         loader: () => fetch('Doctor.json'),
-        Component: MyBookings
+        Component: MyBookings,
+        errorElement:<ErrorForBookMarks></ErrorForBookMarks>
       },
       {
         path: "/Blogs",

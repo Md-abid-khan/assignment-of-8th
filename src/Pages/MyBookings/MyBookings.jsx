@@ -37,7 +37,7 @@ const MyBookings = () => {
             <p className='my-5'>
                 Our platform connects you with verified, experienced doctors across various specialties — all at your convenience.
             </p>
-            <button className='btn bg-blue-600'>  <Link to={"/"}> Book An Appointment </Link>  </button>
+            <button className='btn bg-blue-600 border-blue-700'>  <Link to={"/"}> Book An Appointment </Link>  </button>
         </div>]
     }
     return (
