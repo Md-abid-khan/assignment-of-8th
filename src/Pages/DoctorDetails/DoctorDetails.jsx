@@ -5,21 +5,20 @@ import infoIcon from "../../../Needed images/Logos/information.png"
 import { addItemToLS } from '../../Components/LocalStorage';
 
 const DoctorDetails = () => {
-     const data = useLoaderData();
+    const data = useLoaderData();
     const { id } = useParams();
     const parseId = parseInt(id);
     const selectedDoctor = data.find(d => d.id === parseId)
-    console.log(selectedDoctor);
 
-     const handleAppointment = (id) => {
+
+    const handleAppointment = (id) => {
         addItemToLS(id)
-
     };
 
 
     return (
-         <div>
-            
+        <div>
+
             <div className='my-10 bg-white mx-10 py-10 rounded-2xl flex flex-col items-center gap-5'>
                 <h1 className='text-3xl font-bold mb-2'>Doctor’s Profile Details</h1>
                 <p className='text-center mx-30'>{selectedDoctor.details}</p>
@@ -31,16 +30,16 @@ const DoctorDetails = () => {
                 <div className='flex flex-col gap-5'>
                     <div>
                         <h1 className='font-bold text-2xl my-2'>{selectedDoctor.name}</h1>
-                    <p >{selectedDoctor.education}</p>
+                        <p >{selectedDoctor.education}</p>
                     </div>
                     <div>
                         <p>Working at</p>
-                    <p className='font-semibold text=xl'>{selectedDoctor.workingAt}</p>
+                        <p className='font-semibold text=xl'>{selectedDoctor.workingAt}</p>
                     </div>
                     <div className='flex flex-col gap-3 my-5'>
                         <div className='border-t-2 border-dotted'></div>
-                    <p className='flex gap-2 items-center'> <img src={iconR} alt="IconR" className='h-5' /> {selectedDoctor.registrationNumber}</p>
-                    <div className='border-t-2 border-dotted '></div>
+                        <p className='flex gap-2 items-center'> <img src={iconR} alt="IconR" className='h-5' /> {selectedDoctor.registrationNumber}</p>
+                        <div className='border-t-2 border-dotted '></div>
                     </div>
                     <div className='flex gap-2 '>
                         <p className='font-bold'>Ability :</p>
@@ -52,7 +51,7 @@ const DoctorDetails = () => {
             </div>
             <div className='my-10 bg-white mx-10 py-10 rounded-2xl ' >
                 <div className='flex flex-col items-center'>
-                    
+
                     <h1 className='font-bold text-3xl'>Book an Appointment</h1>
                 </div>
                 <div className='border-t-2 border-dotted m-5'></div>
@@ -70,7 +69,7 @@ const DoctorDetails = () => {
                     </div>
                 </div>
                 <div className='flex flex-col items-center'>
-                    <Link to={"/Bookings"} className='w-7/8'><button className='btn rounded-4xl w-full' onClick={() => { handleAppointment(id) }}> Book Appointment Now </button></Link> 
+                    <Link to={"/Bookings"} className='w-7/8'><button className='btn rounded-4xl w-full' onClick={() => { handleAppointment(id) }}> Book Appointment Now </button></Link>
                 </div>
             </div>
         </div>

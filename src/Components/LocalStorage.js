@@ -30,11 +30,11 @@ const addItemToLS = (id) => {
 }
 
 
-const removeitemLS = (id)=>{
+const removeItemLS = (id)=>{
     const LsItems= getItemFromLS();
     const afterRemove = LsItems.map(i=> i !==id);
     const stringifyAfterRemove = JSON.stringify(afterRemove);
     localStorage.setItem("bookMarks", stringifyAfterRemove) 
 }
 
-export { getItemFromLS, addItemToLS , removeitemLS};
+export { getItemFromLS, addItemToLS , removeItemLS};

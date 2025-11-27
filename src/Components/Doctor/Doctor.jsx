@@ -5,11 +5,9 @@ import IconR from "../../../Needed images/Logos/registered.png"
 const Doctor = ({doctor}) => {
     const { button, education, experience, id, image, name, registrationNumber } = doctor;
 
-    return (
-        <div className=''>
+    return (     
             <div className="card bg-base-100  shadow-sm rounded-2xl">
-
-                <figure className="">
+                <figure>
                     <img
                         src={image}
                         alt="Doctor's Image"
@@ -29,8 +27,6 @@ const Doctor = ({doctor}) => {
                     <button className="btn w-full rounded-4xl mb-5 ">{button}</button>
                 </Link>
             </div>
-
-        </div>
     );
 };
 

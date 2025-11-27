@@ -14,15 +14,14 @@ const Header = () => {
                     <ul
                         tabIndex="-1"
                         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-5 shadow  flex flex-col gap-2 ">
-                       <Link to={"/"}><li className='p-2 rounded-xl' onClick={() => setActive("Home")} style={{ backgroundColor: active === "Home" ? "blue" : "" }}>Home</li></Link>
-                    <Link to={"/Bookings"}><li className='p-2 rounded-xl' onClick={() => setActive("My Bookings")} style={{ backgroundColor: active === "My Bookings" ? "blue" : "" }}>My Bookings</li></Link>
-                    <Link to={"/Blogs"}><li className='p-2 rounded-xl' onClick={() => setActive("Blogs")} style={{ backgroundColor: active === "Blogs" ? "blue" : "" }}>Blogs</li></Link>
-                    <Link to={"/ContactUs"}><li className='p-2 rounded-xl' onClick={() => setActive("Contact Us")} style={{ backgroundColor: active === "Contact Us" ? "blue" : "" }}>Contact Us</li></Link>
+                        <Link to={"/"}><li className='p-2 rounded-xl' onClick={() => setActive("Home")} style={{ backgroundColor: active === "Home" ? "blue" : "" }}>Home</li></Link>
+                        <Link to={"/Bookings"}><li className='p-2 rounded-xl' onClick={() => setActive("My Bookings")} style={{ backgroundColor: active === "My Bookings" ? "blue" : "" }}>My Bookings</li></Link>
+                        <Link to={"/Blogs"}><li className='p-2 rounded-xl' onClick={() => setActive("Blogs")} style={{ backgroundColor: active === "Blogs" ? "blue" : "" }}>Blogs</li></Link>
+                        <Link to={"/ContactUs"}><li className='p-2 rounded-xl' onClick={() => setActive("Contact Us")} style={{ backgroundColor: active === "Contact Us" ? "blue" : "" }}>Contact Us</li></Link>
                     </ul>
                 </div>
                 <div className='flex items-center'>
                     <img className='h-10' src={iconOfPage} alt="icon" />
-
                     <a className="btn btn-ghost text-xl">Phudu</a>
                 </div>
             </div>

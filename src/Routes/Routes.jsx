@@ -24,6 +24,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/Bookings",
+        loader: () => fetch('Doctor.json'),
         Component: MyBookings
       },
       {

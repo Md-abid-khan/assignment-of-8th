@@ -12,7 +12,7 @@ createRoot(document.getElementById('root')).render(
   <StrictMode>
     {/* <App /> */}
     <Suspense fallback={<span className="loading loading-bars loading-xl"></span>}>
-      <RouterProvider router={router}></RouterProvider>
+      <RouterProvider fallback={<span className="loading loading-bars loading-xl"></span>} router={router}></RouterProvider>
       <ToastContainer></ToastContainer>
     </Suspense>
   </StrictMode>,
