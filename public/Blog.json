@@ -1,0 +1,28 @@
+ [
+    {
+      "question": "What is `useState` and how does it work in React?",
+      "answer": "In React, `useState` is a Hook that adds state to functional components. Example:`jsx const [count, setCount] = useState(0);` `count` stores the value and `setCount` updates it. When state updates, the component re-renders. The initial value passed to `useState`",
+      "date": "2024-03-12"
+    },
+    {
+      "question": "What is the purpose of `useEffect` in React?",
+      "answer": "`useEffect` manages side effects in React components. Side effects include data fetching, event listeners, timers, and manual DOM manipulation. It runs after every render unless you provide a dependency array. Example: `jsx useEffect(() => { effect }, [dependencies]);",
+      "date": "2023-11-02"
+    },
+    {
+      "question": "What is a custom hook in React and when should you use one?",
+      "answer": "A custom hook is a function that starts with `use` and allows you to reuse stateful logic across components. It can use other hooks like `useState`, `useEffect`, etc. Example:`js function useCounter() {   const [value, setValue] = useState(0);   return { value, increment: () => setValue(value + 1) };",
+      "date": "2025-01-18"
+    },
+    {
+      "question": "Difference between controlled and uncontrolled components? Which one is better?",
+      "answer": "Controlled components store their input values in React state.Example: `jsx <input value={text} onChange={(e) => setText(e.target.value)} />  React controls the input. Uncontrolled components store their value in the DOM and use `ref` to access it. jsx <input ref={inputRef} /> Controlled is better when you need validation, instant updates, or predictable state. Uncontrolled is simpler and useful for basic forms.",
+      "date": "2024-07-29"
+    },
+    {
+      "question": "Tell us something about `useFormStatus()`",
+      "answer": "`useFormStatus()` is a React hook that provides the status of a form submission. It returns values like `pending`, `data`, `method`, and `action`. It must be used inside a form. Example: jsx const { pending } = useFormStatus(); <button disabled={pending}>{pending ? 'Submitting…' : 'Submit'}</button>. It is useful for disabling buttons, showing loaders, and improving form UX without managing manual loading states.",
+      "date": "2024-09-05"
+    }
+  ]
+
