@@ -1,6 +1,7 @@
 import React from 'react';
 
-const Blogs = ({d}) => {
+const Blogs = ({ d }) => {
+    
     return (
         <div className='flex flex-col bg-white p-15 m-5 gap-5 rounded-2xl'>
             <h2 className='text-2xl font-bold'> <span className='font-extrabold text-red-400'>Question:</span> {d.question}</h2>

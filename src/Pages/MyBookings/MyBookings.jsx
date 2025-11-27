@@ -8,18 +8,17 @@ import Booked from './Booked';
 const MyBookings = () => {
     const data = useLoaderData();
     const notified = (msg) => toast(msg);
+    const [appointments, setAppointments] = useState([]);
 
-    const [appointments,setAppointments] = useState([]);
-
-    useEffect(()=>{
+    useEffect(() => {
         const LsItems = getItemFromLS();
         const convertedData = LsItems.map(item => parseInt(item));
         const selectedItems = data.filter(d => convertedData.includes(d.id));
         setAppointments(selectedItems);
-    },[data]);
+    }, [data]);
 
-    const cancelAppointment = (id)=>{
-        const cancelItems = appointments.filter(book=>book.id!==id);
+    const cancelAppointment = (id) => {
+        const cancelItems = appointments.filter(book => book.id !== id);
         setAppointments(cancelItems);
         notified(`Appointment Cancel`);
         const StoredItem = localStorage.getItem("bookMarks")
@@ -37,27 +36,28 @@ const MyBookings = () => {
             <p className='my-5'>
                 Our platform connects you with verified, experienced doctors across various specialties — all at your convenience.
             </p>
-            <button className='btn bg-blue-600 border-blue-700'>  <Link to={"/"}> Book An Appointment </Link>  </button>
+            <Link to={"/"}><button className='btn bg-blue-600 border-blue-700'>Book An Appointment</button></Link>
         </div>]
     }
+
     return (
         <div>
             <div>
-            <div className='flex flex-col items-center bg-blue-300 mx-60 p-10 rounded-2xl mt-10'>
-                <Chart appointments={appointments}></Chart>
-            </div>
-            <div className='flex flex-col items-center'>
-                <h1 className='mt-10 font-bold text-2xl'>My Today Appointments</h1>
-                <p className='my-5'>Our platform connects you with verified, experienced doctors across various specialties — all at your convenience.</p>
-                <div className='flex flex-col items-center gap-10 p-5 m-5 ' >
-                    {
-                        appointments.map(bookmark => <Booked key={bookmark.id} cancelAppointment={cancelAppointment} bookmark={bookmark}></Booked>)
-                    }
+                <div className='flex flex-col items-center bg-blue-300 mx-60 p-10 rounded-2xl mt-10'>
+                    <Chart appointments={appointments}></Chart>
+                </div>
+                <div className='flex flex-col items-center'>
+                    <h1 className='mt-10 font-bold text-2xl'>My Today Appointments</h1>
+                    <p className='my-5'>Our platform connects you with verified, experienced doctors across various specialties — all at your convenience.</p>
+                    <div className='flex flex-col items-center gap-10 p-5 m-5 ' >
+                        {
+                            appointments.map(bookmark => <Booked key={bookmark.id} cancelAppointment={cancelAppointment} bookmark={bookmark}></Booked>)
+                        }
+                    </div>
+
                 </div>
 
             </div>
-
-        </div>
         </div>
     );
 };

@@ -4,6 +4,7 @@ import { Link } from 'react-router';
 
 const Header = () => {
     const [active, setActive] = useState('')
+    
     return (
         <div className="navbar  shadow-sm px-5 bg-blue-200">
             <div className="navbar-start">

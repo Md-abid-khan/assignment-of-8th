@@ -27,7 +27,7 @@ const router = createBrowserRouter([
         path: "/Bookings",
         loader: () => fetch('Doctor.json'),
         Component: MyBookings,
-        errorElement:<ErrorForBookMarks></ErrorForBookMarks>
+        errorElement: <ErrorForBookMarks></ErrorForBookMarks>
       },
       {
         path: "/Blogs",

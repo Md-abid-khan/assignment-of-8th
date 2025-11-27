@@ -10,15 +10,12 @@ const DoctorDetails = () => {
     const parseId = parseInt(id);
     const selectedDoctor = data.find(d => d.id === parseId)
 
-
     const handleAppointment = (id) => {
         addItemToLS(id)
     };
 
-
     return (
         <div>
-
             <div className='my-10 bg-white mx-10 py-10 rounded-2xl flex flex-col items-center gap-5'>
                 <h1 className='text-3xl font-bold mb-2'>Doctor’s Profile Details</h1>
                 <p className='text-center mx-30'>{selectedDoctor.details}</p>
@@ -69,7 +66,7 @@ const DoctorDetails = () => {
                     </div>
                 </div>
                 <div className='flex flex-col items-center'>
-                    <Link to={"/Bookings"} className='w-7/8'><button className='btn rounded-4xl w-full ' onClick={() => { handleAppointment(id) }}> Book Appointment Now </button></Link>
+                    <Link to={"/Bookings"} className='w-7/8'><button className='btn rounded-4xl w-full' onClick={() => { handleAppointment(id) }}> Book Appointment Now </button></Link>
                 </div>
             </div>
         </div>

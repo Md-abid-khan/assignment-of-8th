@@ -6,7 +6,6 @@ import Footer from '../../Components/Footer/Footer';
 const Root = () => {
 
     const ChangeFavicon = (iconUrl) => {
-
         const favicon = document.querySelector("link[rel='icon']");
         favicon.href = iconUrl;
     };

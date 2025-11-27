@@ -5,6 +5,7 @@ import CountDown from '../CountDown/CountDown';
 const Doctors = ({ data }) => {
     const [seeMore, setSeeMore] = useState(false);
     const visibleData = seeMore ? data : data.slice(0, 6);
+    
     return (
         <div className='flex flex-col items-center'>
             <h1 className='text-5xl font-bold mt-10'>Our Best Doctors</h1>

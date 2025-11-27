@@ -5,7 +5,7 @@ import Doctors from '../../Components/Doctor/Doctors';
 
 const Home = () => {
     const data = useLoaderData();
-    // console.log(data);
+
     return (
         <div>
             <Banner></Banner>

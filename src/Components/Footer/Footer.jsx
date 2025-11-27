@@ -8,13 +8,13 @@ import youtubeLogo from "../../../Needed images/Logos/youtube.png"
 
 const Footer = () => {
     const [active, setActive] = useState('')
+    
     return (
         <footer className="footer footer-horizontal footer-center bg-base-200 text-base-content rounded p-10">
             <div className='flex items-center'>
                 <img className='h-10' src={iconOfPage} alt="icon" />
-
                 <a className="btn btn-ghost text-xl">Phudu</a>
-            </div>
+            </div>     
             <nav className="grid grid-flow-col gap-4">
                 <ul className='flex gap-5'>
                     <Link to={"/"}><li className='p-2 rounded-xl' onClick={() => setActive("Home")} style={{ backgroundColor: active === "Home" ? "blue" : "" }}>Home</li></Link>
@@ -23,6 +23,7 @@ const Footer = () => {
                     <Link to={"/ContactUs"}><li className='p-2 rounded-xl' onClick={() => setActive("Contact Us")} style={{ backgroundColor: active === "Contact Us" ? "blue" : "" }}>Contact Us</li></Link>
                 </ul>
             </nav>
+            <div className='border-t-2 w-full border-dotted'></div>
             <nav>
                 <div className="grid grid-flow-col gap-4">
                         <a href='https://www.facebook.com/' target='_blank'><img className='h-10' src={fbLogo} alt="facebook Logo" /></a>
