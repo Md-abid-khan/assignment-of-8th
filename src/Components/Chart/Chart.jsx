@@ -14,7 +14,7 @@ export default function Chart({appointments}) {
         left: 0,
       }}
     >
-      <CartesianGrid stroke="#aaa" strokeDasharray="5 5" />
+      <CartesianGrid stroke="#aaa" strokeDasharray="5 5"  />
       <Bar type="monotone" dataKey="fee" stroke="purple" strokeWidth={2} name="My data series name" />
       <XAxis dataKey="name" />
       <YAxis width="auto" label={{ value: '', position: 'insideLeft', angle: -90 }} />

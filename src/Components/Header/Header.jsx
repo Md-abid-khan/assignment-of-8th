@@ -5,7 +5,7 @@ import { Link } from 'react-router';
 const Header = () => {
     const [active, setActive] = useState('')
     return (
-        <div className="navbar bg-base-100 shadow-sm px-5">
+        <div className="navbar bg-base-100 shadow-sm px-5 bg-blue-200">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -27,10 +27,10 @@ const Header = () => {
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1 flex gap-5">
-                    <Link to={"/"}><li className='p-2 rounded-xl' onClick={() => setActive("Home")} style={{ backgroundColor: active === "Home" ? "blue" : "" }}>Home</li></Link>
-                    <Link to={"/Bookings"}><li className='p-2 rounded-xl' onClick={() => setActive("My Bookings")} style={{ backgroundColor: active === "My Bookings" ? "blue" : "" }}>My Bookings</li></Link>
-                    <Link to={"/Blogs"}><li className='p-2 rounded-xl' onClick={() => setActive("Blogs")} style={{ backgroundColor: active === "Blogs" ? "blue" : "" }}>Blogs</li></Link>
-                    <Link to={"/ContactUs"}><li className='p-2 rounded-xl' onClick={() => setActive("Contact Us")} style={{ backgroundColor: active === "Contact Us" ? "blue" : "" }}>Contact Us</li></Link>
+                    <Link to={"/"}><li className='p-2 rounded-xl' onClick={() => setActive("Home")} style={{ backgroundColor: active === "Home" ? "orange" : "" }}>Home</li></Link>
+                    <Link to={"/Bookings"}><li className='p-2 rounded-xl' onClick={() => setActive("My Bookings")} style={{ backgroundColor: active === "My Bookings" ? "orange" : "" }}>My Bookings</li></Link>
+                    <Link to={"/Blogs"}><li className='p-2 rounded-xl' onClick={() => setActive("Blogs")} style={{ backgroundColor: active === "Blogs" ? "orange" : "" }}>Blogs</li></Link>
+                    <Link to={"/ContactUs"}><li className='p-2 rounded-xl' onClick={() => setActive("Contact Us")} style={{ backgroundColor: active === "Contact Us" ? "orange" : "" }}>Contact Us</li></Link>
                 </ul>
             </div>
             <div className="navbar-end">

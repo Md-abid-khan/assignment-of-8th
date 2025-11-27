@@ -43,7 +43,7 @@ const MyBookings = () => {
     return (
         <div>
             <div>
-            <div className='flex flex-col items-center bg-white mx-60 p-10 rounded-2xl'>
+            <div className='flex flex-col items-center bg-blue-300 mx-60 p-10 rounded-2xl mt-10'>
                 <Chart appointments={appointments}></Chart>
             </div>
             <div className='flex flex-col items-center'>

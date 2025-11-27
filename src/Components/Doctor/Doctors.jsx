@@ -15,7 +15,7 @@ const Doctors = ({ data }) => {
                 </div>
                 <div className='flex flex-col items-center m-5'>
                     {data.length >= 6 && (
-                        <button className='btn bg-blue-600' onClick={() => setSeeMore(!seeMore)}>
+                        <button className='btn bg-blue-600 rounded-xl' onClick={() => setSeeMore(!seeMore)}>
                             {
                                 seeMore ? "Show Less Doctor" : "Show All Doctor"
                             }
